@@ -1,1 +1,54 @@
 
+
+## Módulo de Login
+
+| ID     | Módulo | Caso de Prueba                                     | Precondiciones      | Pasos                                                                                | Resultado Esperado                                                  | Prioridad | Severidad |
+| ------ | ------ | -------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------- | --------- |
+| TC-001 | Login  | Inicio de sesión válido con credenciales correctas | User account exists | 1. Click Login 2. Enter valid username 3. Enter valid password 4. Click Login button | User should login successfully and username should appear in navbar | High      | Critical  |
+| TC-002 | Login  | Inicio de sesión con contraseña inválida           | User account exists | 1. Click Login 2. Enter valid username 3. Enter incorrect password 4. Click Login    | Error message should appear indicating invalid credentials          | High      | High      |
+| TC-003 | Login  | Inicio de sesión con usuario vacío                 | None                | 1. Click Login 2. Leave username empty 3. Enter password 4. Click Login              | System should display validation message                            | Medium    | Medium    |
+| TC-004 | Login  | Inicio de sesión con contraseña vacía              | None                | 1. Click Login 2. Enter username 3. Leave password empty 4. Click Login              | System should display validation message                            | Medium    | Medium    |
+| TC-005 | Login  | Cerrar ventana modal de login                      | None                | 1. Click Login 2. Click close button (X)                                             | Login modal should close successfully                               | Low       | Low       |
+
+---
+
+## Módulo de Productos
+
+| ID     | Módulo   | Caso de Prueba                            | Precondiciones      | Pasos                    | Resultado Esperado                                              | Prioridad | Severidad |
+| ------ | -------- | ----------------------------------------- | ------------------- | ------------------------ | --------------------------------------------------------------- | --------- | --------- |
+| TC-006 | Products | Verificar página de detalles del producto | User is on homepage | 1. Click any product     | Product page should display image, title, description and price | High      | Medium    |
+| TC-007 | Products | Verificar filtro de categorías            | User is on homepage | 1. Click Phones category | Only phone products should be displayed                         | Medium    | Medium    |
+| TC-008 | Products | Verificar carga de productos en inicio    | Website accessible  | 1. Open homepage         | Product list should load correctly without broken elements      | High      | High      |
+| TC-009 | Products | Verificar paginación botón siguiente      | Products available  | 1. Click Next button     | Next group of products should appear                            | Medium    | Medium    |
+
+---
+
+## Módulo de Carrito
+
+| ID     | Módulo | Caso de Prueba                                          | Precondiciones            | Pasos                                  | Resultado Esperado                            | Prioridad | Severidad |
+| ------ | ------ | ------------------------------------------------------- | ------------------------- | -------------------------------------- | --------------------------------------------- | --------- | --------- |
+| TC-010 | Cart   | Agregar producto al carrito                             | User logged in            | 1. Open product 2. Click Add to Cart   | Product should be added successfully          | Critical  | Critical  |
+| TC-011 | Cart   | Eliminar producto del carrito                           | Product exists in cart    | 1. Open cart 2. Click Delete           | Product should be removed from cart           | High      | High      |
+| TC-012 | Cart   | Verificar persistencia del carrito después de refrescar | Product added to cart     | 1. Add product 2. Refresh page         | Product should remain in cart                 | High      | Medium    |
+| TC-013 | Cart   | Agregar múltiples productos al carrito                  | User logged in            | 1. Add several products 2. Open cart   | All selected products should appear correctly | Medium    | Medium    |
+| TC-014 | Cart   | Verificar cálculo del monto total                       | Multiple products in cart | 1. Add products 2. Verify total amount | Total should equal sum of all products        | Critical  | High      |
+
+---
+
+## Módulo de Compra
+
+| ID     | Módulo   | Caso de Prueba                  | Precondiciones                | Pasos                                                                                   | Resultado Esperado                                     | Prioridad | Severidad |
+| ------ | -------- | ------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------ | --------- | --------- |
+| TC-015 | Purchase | Completar compra exitosa        | Product in cart               | 1. Open cart 2. Click Place Order 3. Complete form 4. Click Purchase                    | Confirmation message should appear                     | Critical  | Critical  |
+| TC-016 | Purchase | Compra con campo nombre vacío   | Product in cart               | 1. Open Place Order form 2. Leave name empty 3. Complete other fields 4. Click Purchase | Validation message should appear                       | High      | High      |
+| TC-017 | Purchase | Compra con campo tarjeta vacío  | Product in cart               | 1. Open Place Order form 2. Leave card field empty 3. Click Purchase                    | System should validate mandatory fields                | High      | High      |
+| TC-018 | Purchase | Verificar popup de confirmación | Successful purchase completed | 1. Complete purchase                                                                    | Confirmation popup should display purchase information | Medium    | Medium    |
+
+---
+
+## Módulo de Navegación
+
+| ID     | Módulo     | Caso de Prueba                       | Precondiciones          | Pasos                | Resultado Esperado                 | Prioridad | Severidad |
+| ------ | ---------- | ------------------------------------ | ----------------------- | -------------------- | ---------------------------------- | --------- | --------- |
+| TC-019 | Navigation | Verificar navegación botón Home      | User inside any section | 1. Click Home button | User should return to homepage     | Medium    | Low       |
+| TC-020 | Navigation | Verificar acceso a página de carrito | User logged in          | 1. Click Cart menu   | Cart page should load successfully | High      | Medium    |
