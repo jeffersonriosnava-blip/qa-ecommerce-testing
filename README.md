@@ -1,24 +1,33 @@
-# qa-ecommerce-testing
-Manual QA testing project for an e-commerce website.
 # QA E-commerce Testing Project
 
-## Objective
-Manual QA testing project executed on DemoBlaze e-commerce platform.
+## Project Overview
+Manual QA testing project executed on DemoBlaze e-commerce website.
 
 ## Scope
 - Login testing
 - Cart testing
 - Purchase flow
+- Navigation testing
 - Form validations
 
+## Testing Types
+- Functional Testing
+- UI Testing
+- Negative Testing
+- Smoke Testing
+
+## Deliverables
+- Test Cases
+- Bug Reports
+- Test Execution Summary
+- Screenshots Evidence
+
 ## Tools Used
-- Jira
 - Excel
 - GitHub
 - Chrome DevTools
+- Jira (simulated)
 
-## Deliverables
-- Test cases
-- Bug reports
-- Test evidence
-- Execution summary
+## Test Environment
+- Browser: Google Chrome
+- OS: Windows 11
